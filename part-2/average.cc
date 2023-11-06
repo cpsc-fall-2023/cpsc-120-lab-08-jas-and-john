@@ -9,7 +9,7 @@
 
 int main(int argc, char* argv[]) {
   std::vector<std::string> arguments{argv, argv + argc};
-  std::vector<double> num;
+  std::vector<double> digits;
   double sum{0};
 
   if (arguments.size() <= 2) {
@@ -17,17 +17,14 @@ int main(int argc, char* argv[]) {
     return 1;
   }
 
-  for (int = 1, i < argc; i++) {
-    values.push_back(std::stod(arguments[i]));
+  for (int i = 1; i < argc; i++) {
+    digits.push_back(std::stod(arguments[i]));
   }
 
-  for (double : arguments) {
-    if (num == arguments.at(0)) {
-      continue;
-    }
-    double number{std::stod(num)};
-    std::cout << number << "\n";
-    sum += number;
+  for (double num  : digits) {
+
+    std::cout << num << "\n";
+    sum += num;
   }
   std::cout << sum << std::endl;
   double average{sum / (argc - 1)};
