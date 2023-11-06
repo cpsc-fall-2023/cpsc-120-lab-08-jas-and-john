@@ -9,26 +9,23 @@
 
 int main(int argc, char* argv[]) {
   std::vector<std::string> arguments{argv, argv + argc};
-  std::vector<double> digits;
+  std::vector<double> values;
   double sum{0};
 
-  if (arguments.size() <= 2) {
+  if (arguments.size() <= 1) {
     std::cout << "error: you must supply at least one number \n";
     return 1;
   }
 
   for (int i = 1; i < argc; i++) {
-    digits.push_back(std::stod(arguments[i]));
+    values.push_back(std::stod(arguments[i]));
   }
 
-  for (double num  : digits) {
-
-    std::cout << num << "\n";
-    sum += num;
+  for (double element  : values) {
+    sum += element;
   }
-  std::cout << sum << std::endl;
+
   double average{sum / (argc - 1)};
-
   std::cout << "average = " << average << "\n";
   return 0;
 }
