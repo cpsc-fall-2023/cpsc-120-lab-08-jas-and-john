@@ -16,6 +16,7 @@ int main(int argc, char* argv[]) {
   }
   
   double sum{0};
+  
   for (const std::string& num : arguments) {
     if (num == arguments.at(0)) {
       continue;
