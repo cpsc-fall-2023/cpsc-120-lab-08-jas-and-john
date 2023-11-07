@@ -14,9 +14,7 @@ int main(int argc, char* argv[]) {
     std::cout << "error: you must supply at least one number \n";
     return 1;
   }
-  
   double sum{0};
-  
   for (const std::string& num : arguments) {
     if (num == arguments.at(0)) {
       continue;
